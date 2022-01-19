@@ -1,5 +1,6 @@
 package com.softserveinc;
 
+import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -32,7 +33,23 @@ import java.util.Scanner;
 public class Task02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
+        System.out.print(" t1 >>>");
+        double t1 = scanner.nextDouble();
+        System.out.print(" t2 >>>");
+        double t2 = scanner.nextDouble();
+        System.out.print(" dt >>> ");
+        double dt = scanner.nextDouble();
+
+        System.out.println("-----------------\n" +
+                "C       F\n" +
+                "-----------------");
+        while (t2 >= t1) {
+            double f = 9 * t1 / 5 + 32;
+            System.out.printf("%.2f    %.2f\n", t1, f);
+            t1 += dt;
+        }
+        System.out.println("-----------------");
+
 
     }
 }
