@@ -22,7 +22,20 @@ import java.util.Scanner;
 public class Task03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
+
+        int minNumber = Integer.MAX_VALUE;
+        do {
+            System.out.print(">>> ");
+            int number = scanner.nextInt();
+
+            if (number <= 0) {
+                break;
+            }
+            if (minNumber>number) {
+                minNumber=number;
+            }
+        } while (true);
+        System.out.println("Minimum number is " + minNumber);
 
     }
 }
